@@ -34,6 +34,11 @@ public class Circulo extends FiguraGeometrica {
     public void setRaio(double raio) {
         this.raio = raio;
     }
+    
+    public void setRaio(String raio){
+        this.raio = Double.parseDouble(raio);
+    }
+    
     //Calculo da cincunferência e área
     
     public double getCirc(){
@@ -48,7 +53,7 @@ public class Circulo extends FiguraGeometrica {
     
      public void leitura(){
         super.leitura();
-        setRaio(Double.parseDouble(JOptionPane.showInputDialog("Digite raio: ")));
+        setRaio(JOptionPane.showInputDialog("Digite raio: "));
     }
     
     

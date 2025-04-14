@@ -41,6 +41,10 @@ public class Triangulo extends FiguraGeometrica{
     public void setAltura(double altura) {
         this.altura = altura;
     }
+    
+    public void setAltura(String altura){
+        this.altura = Double.parseDouble(altura);
+    }
 
     public double getBase() {
         return base;
@@ -48,6 +52,10 @@ public class Triangulo extends FiguraGeometrica{
 
     public void setBase(double base) {
         this.base = base;
+    }
+    
+    public void setBase(String base){
+        this.base = Double.parseDouble(base);
     }
     
     //Calculo da área
@@ -66,8 +74,8 @@ public class Triangulo extends FiguraGeometrica{
     
     public void leitura(){
         super.leitura();
-        setBase(Double.parseDouble(JOptionPane.showInputDialog("Digite base: ")));
-        setAltura(Double.parseDouble(JOptionPane.showInputDialog("Digite altura: ")));
+        setBase(JOptionPane.showInputDialog("Digite base: "));
+        setAltura(JOptionPane.showInputDialog("Digite altura: "));
     }
     
     //toString da altura, base e área do triângulo
